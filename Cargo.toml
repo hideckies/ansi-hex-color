@@ -13,7 +13,11 @@ repository = "https://github.com/hideckies/ansi-hex-color"
 
 [dependencies]
 raster = "0.2.0"
+regex = "1"
 
-[[bin]]
-name = "color_samples"
-path = "examples/color_samples.rs"
+[lib]
+name = "ansi_hex_color"
+
+# [[bin]]
+# name = "color_samples"
+# path = "examples/color_samples.rs"
