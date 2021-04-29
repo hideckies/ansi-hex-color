@@ -6,11 +6,10 @@ authors = ["hideckies <hideckies@gmail.com>"]
 edition = "2018"
 keywords = ["ansi", "terminal", "hex", "color"]
 categories = ["command-line-interface"]
+documentation = "https://docs.rs/ansi_hex_color"
 license = "MIT"
 readme = "README.md"
-repositry = "https://github.com/hideckies/ansi-hex-color"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+repository = "https://github.com/hideckies/ansi-hex-color"
 
 [dependencies]
 raster = "0.2.0"
