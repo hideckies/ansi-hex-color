@@ -1,4 +1,24 @@
+//! A library which color text from hex code.
+//!
+//! ## Usage
+//!
+//! ```rust
+//!	use ansi_hex_color;
+//!
+//! fn main() {
+//! 	let foreground = "#FF0000";
+//!		let background = "#004082";
+//! 	let txt = "Hello world";
+//1
+//! 	let colored_txt = ansi_hex_color::colored(
+//! 		foreground, background, txt);
+//!
+//! 	println!("{}", colored_txt);
+//! }
+//! ```
+
 use raster::Color;
+use regex::Regex;
 use std::str;
 
 mod ansi;
@@ -63,13 +83,35 @@ fn validate_hex(target: &str) -> bool {
 		return is_hex;
 	}
 	
-	let mut splited_target = target.chars();
-
-	let char_0: String = splited_target.nth(0).unwrap().to_string();
+	let splited_target = target.chars();
 	
-	if &char_0 == "#" {
-		is_hex = true;
-		return is_hex;
+	// Regex
+	let re = Regex::new(r"[0-9a-f]+").unwrap();
+	
+	// The counter for loop
+	let mut i: u8 = 0;
+	
+	for c in splited_target {
+		let c_string = c.to_string().to_lowercase();
+		
+		if i == 0 { 
+			if &c_string == "#" {
+				is_hex = true;
+			} else {
+				is_hex = false;
+				return is_hex;
+			}
+		}
+		else {
+			if re.is_match(&c_string) {
+				is_hex = true;
+			} else {
+				is_hex = false;
+				return is_hex;
+			}
+		}
+		
+		i += 1;
 	}
 	
 	is_hex

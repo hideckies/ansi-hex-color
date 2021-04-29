@@ -6,7 +6,7 @@ fn main() {
 	let txt_red = colored("#FF0000", "", "Hello");
 	let txt_b_red = colored("", "#FF0000", "Hello");
 	let txt_blue = colored("#0024c0", "", "Hello");
-	let txt_b_blue = colored("a", "#0000Dd", "Hello");
+	let txt_b_blue = colored("", "#0000D3", "Hello");
 	
 	println!("{}", txt_white);
 	println!("{}", txt_b_white);
