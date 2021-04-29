@@ -9,7 +9,7 @@ in Cargo.toml
 
 ```toml
 [dependencies]
-ansi_hex_color = "0.1.0"
+ansi-hex-color = "0.1.0"
 ```
 
 ## Usage
