@@ -1,0 +1,20 @@
+[package]
+name = "ansi-hex-color"
+description = "Color the text on the terminal with ANSI and hex-code"
+version = "0.1.0"
+authors = ["hideckies <hideckies@gmail.com>"]
+edition = "2018"
+keywords = ["ansi", "terminal", "hex", "color"]
+categories = ["command-line-interface"]
+license = "MIT"
+readme = "README.md"
+repositry = "https://github.com/hideckies/ansi-hex-color"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+raster = "0.2.0"
+
+[[bin]]
+name = "color_samples"
+path = "examples/color_samples.rs"
