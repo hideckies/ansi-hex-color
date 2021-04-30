@@ -9,7 +9,7 @@ in Cargo.toml
 
 ```toml
 [dependencies]
-ansi-hex-color = "0.1.0"
+ansi-hex-color = "0.1.1"
 ```
 
 ## Usage
@@ -27,4 +27,12 @@ fn main () {
 	
 	println!("{}", colored_txt);
 }
+```
+
+## Default style
+
+If you put "" or a string other than `hex code` in the first and second arguments, the text will be default style(white text, no background).
+
+```rust
+let colored_txt = ansi_hex_color::colored("", "", "This is a default style.");
 ```
